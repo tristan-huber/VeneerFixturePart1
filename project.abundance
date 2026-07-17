@@ -823,6 +823,60 @@
           "ioValue": 3
         }
       ]
+    },
+    {
+      "atomType": "Fusion",
+      "x": 0.63671875,
+      "y": 0.4085714285714286,
+      "uniqueID": "id-68795",
+      "ioValues": [],
+      "unionType": "Fusion"
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.62109375,
+      "y": 0.8371428571428572,
+      "uniqueID": "id-68800",
+      "ioValues": [
+        {
+          "name": "Shape 2",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 3",
+          "ioValue": null
+        }
+      ]
+    },
+    {
+      "atomType": "Export",
+      "x": 0.7630208333333334,
+      "y": 0.7457142857142858,
+      "uniqueID": "id-68806",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "File Type",
+          "ioValue": "STL",
+          "currentEquation": "STL"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "VeneerFixturePart1",
+          "currentEquation": "VeneerFixturePart1"
+        }
+      ],
+      "type": "STL",
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "VeneerFixturePart1"
     }
   ],
   "allConnectors": [
@@ -852,6 +906,11 @@
       "ap2ID": "id-68785"
     },
     {
+      "ap2Name": "Shape 3",
+      "ap1ID": "id-68687",
+      "ap2ID": "id-68800"
+    },
+    {
       "ap2Name": "holediam",
       "ap1ID": "id-68693",
       "ap2ID": "id-68730"
@@ -870,6 +929,16 @@
       "ap2Name": "geometry",
       "ap1ID": "id-68785",
       "ap2ID": "id-68789"
+    },
+    {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-68789",
+      "ap2ID": "id-68800"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-68800",
+      "ap2ID": "id-68806"
     }
   ],
   "unitsKey": "MM",
