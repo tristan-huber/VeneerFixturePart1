@@ -7,8 +7,7 @@
   "ioValues": [
     {
       "name": "VeneerThickness",
-      "ioValue": 0.6,
-      "currentEquation": "0.6"
+      "ioValue": 0.6
     },
     {
       "name": "ArcDiamMM",
@@ -17,8 +16,7 @@
     },
     {
       "name": "BrassDiam",
-      "ioValue": 3.5,
-      "currentEquation": "3.5"
+      "ioValue": 3.5
     }
   ],
   "topLevel": true,
@@ -45,7 +43,7 @@
     {
       "atomType": "Input",
       "x": 0.025384615384615384,
-      "y": 0.3171428571428571,
+      "y": 0.24615384615384617,
       "uniqueID": "id-68438",
       "name": "ArcDiamMM"
     },
@@ -66,452 +64,6 @@
       "value": 50
     },
     {
-      "atomType": "Molecule",
-      "x": 0.20052083333333334,
-      "y": 0.2885714285714286,
-      "uniqueID": "id-68599",
-      "name": "HoldyPart",
-      "ioValues": [
-        {
-          "name": "bigdiam",
-          "ioValue": 367.5
-        },
-        {
-          "name": "groovesize",
-          "ioValue": 0.6
-        }
-      ],
-      "topLevel": false,
-      "allAtoms": [
-        {
-          "atomType": "Output",
-          "x": 0.98,
-          "y": 0.5,
-          "uniqueID": "id-68601",
-          "ioValues": [
-            {
-              "name": "number or geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
-        },
-        {
-          "atomType": "Circle",
-          "x": 0.2830729166666667,
-          "y": 0.1757142857142857,
-          "uniqueID": "id-68603",
-          "ioValues": [
-            {
-              "name": "diameter",
-              "ioValue": 367.5,
-              "currentEquation": "ArcDiamMM"
-            }
-          ]
-        },
-        {
-          "atomType": "Equation",
-          "x": 0.27395833333333336,
-          "y": 0.46714285714285714,
-          "uniqueID": "id-68604",
-          "name": "x - y",
-          "ioValues": [
-            {
-              "name": "x",
-              "ioValue": 367.5
-            },
-            {
-              "name": "y",
-              "ioValue": 0.6
-            }
-          ],
-          "currentEquation": "x - y"
-        },
-        {
-          "atomType": "Circle",
-          "x": 0.3553385416666667,
-          "y": 0.3157142857142857,
-          "uniqueID": "id-68605",
-          "ioValues": [
-            {
-              "name": "diameter",
-              "ioValue": 366.9
-            }
-          ]
-        },
-        {
-          "atomType": "Difference",
-          "x": 0.4276041666666667,
-          "y": 0.16999999999999998,
-          "uniqueID": "id-68606",
-          "ioValues": [
-            {
-              "name": "retain",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "remove",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
-        },
-        {
-          "atomType": "Extrude",
-          "x": 0.5141927083333334,
-          "y": 0.2642857142857143,
-          "uniqueID": "id-68607",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "height",
-              "ioValue": 5
-            }
-          ]
-        },
-        {
-          "atomType": "Color",
-          "x": 0.6658854166666667,
-          "y": 0.22999999999999998,
-          "uniqueID": "id-68608",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ],
-          "selectedColor": "Keep Out"
-        },
-        {
-          "atomType": "Move",
-          "x": 0.6880208333333334,
-          "y": 0.7214285714285714,
-          "uniqueID": "id-68609",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "xDist",
-              "ioValue": 0
-            },
-            {
-              "name": "yDist",
-              "ioValue": 0
-            },
-            {
-              "name": "zDist",
-              "ioValue": 1.6666666666666667,
-              "currentEquation": "height / 3"
-            }
-          ]
-        },
-        {
-          "atomType": "Assembly",
-          "x": 0.7921875,
-          "y": 0.4528571428571429,
-          "uniqueID": "id-68610",
-          "ioValues": [
-            {
-              "name": "Shape 1",
-              "ioValue": null
-            },
-            {
-              "name": "Shape 2",
-              "ioValue": null
-            }
-          ]
-        },
-        {
-          "atomType": "Move",
-          "x": 0.4673177083333333,
-          "y": 0.5385714285714286,
-          "uniqueID": "id-68611",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "xDist",
-              "ioValue": -183.75,
-              "currentEquation": "-ArcDiamMM / 2"
-            },
-            {
-              "name": "yDist",
-              "ioValue": 0
-            },
-            {
-              "name": "zDist",
-              "ioValue": 0
-            }
-          ]
-        },
-        {
-          "atomType": "Rectangle",
-          "x": 0.3006510416666667,
-          "y": 0.7614285714285715,
-          "uniqueID": "id-68612",
-          "ioValues": [
-            {
-              "name": "x length",
-              "ioValue": 100
-            },
-            {
-              "name": "y length",
-              "ioValue": 50
-            }
-          ]
-        },
-        {
-          "atomType": "Extrude",
-          "x": 0.39895833333333336,
-          "y": 0.8014285714285714,
-          "uniqueID": "id-68613",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "height",
-              "ioValue": 10,
-              "currentEquation": "height * 2"
-            }
-          ]
-        },
-        {
-          "atomType": "Intersection",
-          "x": 0.473828125,
-          "y": 0.8042857142857142,
-          "uniqueID": "id-68614",
-          "ioValues": [
-            {
-              "name": "geometry1",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "geometry2",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
-        },
-        {
-          "atomType": "GitHubMolecule",
-          "x": 0.5747395833333334,
-          "y": 0.6928571428571427,
-          "uniqueID": "id-68615",
-          "name": "util.Offset",
-          "ioValues": [
-            {
-              "name": "Shape",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "Offset",
-              "ioValue": 1.5
-            }
-          ],
-          "topLevel": false,
-          "allAtoms": [
-            {
-              "atomType": "Output",
-              "x": 0.98,
-              "y": 0.5,
-              "uniqueID": "id-68616",
-              "ioValues": [
-                {
-                  "name": "number or geometry",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                }
-              ]
-            },
-            {
-              "atomType": "Code",
-              "x": 0.36328124999999994,
-              "y": 0.5657142857142857,
-              "uniqueID": "id-68617",
-              "ioValues": [
-                {
-                  "name": "shape",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "offset",
-                  "ioValue": 1.5
-                }
-              ],
-              "interpreterVersion": 1,
-              "code": "function run(shape: Assembly, offset: number = 1) {\n  return shape.onLeafs((leaf) => {\n    console.log(leaf)\n    if (leaf.geometry instanceof replicad.Drawing) {\n      throw new Error(\"Drawings not supported for this type of offset\")\n    }\n\n    const oc = replicad.getOC();\n    const progress = new oc.Message_ProgressRange_1();\n    const offsetBuilder = new oc.BRepOffsetAPI_MakeOffsetShape();\n    offsetBuilder.PerformByJoin(\n      leaf.geometry.wrapped,\n      offset,\n      0.000001,\n      oc.BRepOffset_Mode.BRepOffset_Skin,\n      true, // for interior offsets this seems to work better when set to true.\n      false,\n      oc.GeomAbs_JoinType.GeomAbs_Arc,\n      false,\n      progress\n    );\n\n    //      offsetBuilder.PerformBySimple(leaf.geometry.wrapped, offset)\n    leaf.geometry = replicad.cast(replicad.downcast(offsetBuilder.Shape()))\n    if (leaf.geometry instanceof replicad.Shell) {\n      console.log(\"got shell, trying to make solid\")\n      leaf.geometry = replicad.makeSolid([leaf.geometry])\n    }\n\n    offsetBuilder.delete();\n    progress.delete();\n\n    return leaf;\n    //leaf.geometry = replicad.makeOffset(leaf.geometry, offset);\n  })\n}",
-              "compiledCode": "\"use strict\";\nfunction run(shape, offset = 1) {\n    return shape.onLeafs((leaf) => {\n        console.log(leaf);\n        if (leaf.geometry instanceof replicad.Drawing) {\n            throw new Error(\"Drawings not supported for this type of offset\");\n        }\n        const oc = replicad.getOC();\n        const progress = new oc.Message_ProgressRange_1();\n        const offsetBuilder = new oc.BRepOffsetAPI_MakeOffsetShape();\n        offsetBuilder.PerformByJoin(leaf.geometry.wrapped, offset, 0.000001, oc.BRepOffset_Mode.BRepOffset_Skin, true, // for interior offsets this seems to work better when set to true.\n        false, oc.GeomAbs_JoinType.GeomAbs_Arc, false, progress);\n        //      offsetBuilder.PerformBySimple(leaf.geometry.wrapped, offset)\n        leaf.geometry = replicad.cast(replicad.downcast(offsetBuilder.Shape()));\n        if (leaf.geometry instanceof replicad.Shell) {\n            console.log(\"got shell, trying to make solid\");\n            leaf.geometry = replicad.makeSolid([leaf.geometry]);\n        }\n        offsetBuilder.delete();\n        progress.delete();\n        return leaf;\n        //leaf.geometry = replicad.makeOffset(leaf.geometry, offset);\n    });\n}\n"
-            },
-            {
-              "atomType": "Input",
-              "x": 0.025384615384615384,
-              "y": 0.15384615384615385,
-              "uniqueID": "id-68618",
-              "name": "Shape",
-              "type": "geometry"
-            },
-            {
-              "atomType": "Input",
-              "x": 0.025384615384615384,
-              "y": 0.24615384615384617,
-              "uniqueID": "id-68619",
-              "name": "Offset"
-            }
-          ],
-          "allConnectors": [
-            {
-              "ap2Name": "number or geometry",
-              "ap1ID": "id-68617",
-              "ap2ID": "id-68616"
-            },
-            {
-              "ap2Name": "shape",
-              "ap1ID": "id-68618",
-              "ap2ID": "id-68617"
-            },
-            {
-              "ap2Name": "offset",
-              "ap1ID": "id-68619",
-              "ap2ID": "id-68617"
-            }
-          ],
-          "parentRepo": {
-            "privateRepo": false,
-            "repoName": "util.Offset",
-            "dateCreated": "2026-07-17T21:53:37Z",
-            "readMe": "https://raw.githubusercontent.com/tristan-huber/util.Offset/master/README.md?sanitize=true",
-            "yyyy": 2026,
-            "topMoleculeID": "id-66747",
-            "githubMoleculesUsed": [],
-            "html_url": "https://github.com/tristan-huber/util.Offset",
-            "topics": [
-              "abundance-tool"
-            ],
-            "parentRepo": null,
-            "forks": 0,
-            "dateModified": "739814",
-            "ranking": 0,
-            "searchField": "util.offset tristan-huber offset an assembly of solids by some constant distance. positive value corresponds to a larger result, negative offsets correspond to a smaller result. abundance-tool",
-            "owner": "tristan-huber",
-            "description": "Offset an assembly of solids by some constant distance. Positive value corresponds to a larger result, negative offsets correspond to a smaller result.",
-            "contentURL": "https://raw.githubusercontent.com/tristan-huber/util.Offset/master/project.abundance?sanitize=true",
-            "svgURL": "https://raw.githubusercontent.com/tristan-huber/util.Offset/master/project.svg?sanitize=true",
-            "isLocal": false
-          },
-          "unitsKey": "Unitless",
-          "fileTypeVersion": 1,
-          "lastReloadedFromGithubAt": 1784326800179
-        },
-        {
-          "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.30857142857142855,
-          "uniqueID": "id-68681",
-          "name": "bigdiam"
-        },
-        {
-          "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.40087912087912086,
-          "uniqueID": "id-68684",
-          "name": "groovesize"
-        }
-      ],
-      "allConnectors": [
-        {
-          "ap2Name": "retain",
-          "ap1ID": "id-68603",
-          "ap2ID": "id-68606"
-        },
-        {
-          "ap2Name": "diameter",
-          "ap1ID": "id-68604",
-          "ap2ID": "id-68605"
-        },
-        {
-          "ap2Name": "remove",
-          "ap1ID": "id-68605",
-          "ap2ID": "id-68606"
-        },
-        {
-          "ap2Name": "geometry",
-          "ap1ID": "id-68606",
-          "ap2ID": "id-68607"
-        },
-        {
-          "ap2Name": "geometry",
-          "ap1ID": "id-68607",
-          "ap2ID": "id-68611"
-        },
-        {
-          "ap2Name": "Shape 2",
-          "ap1ID": "id-68608",
-          "ap2ID": "id-68610"
-        },
-        {
-          "ap2Name": "Shape 1",
-          "ap1ID": "id-68609",
-          "ap2ID": "id-68610"
-        },
-        {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-68610",
-          "ap2ID": "id-68601"
-        },
-        {
-          "ap2Name": "geometry1",
-          "ap1ID": "id-68611",
-          "ap2ID": "id-68614"
-        },
-        {
-          "ap2Name": "geometry",
-          "ap1ID": "id-68611",
-          "ap2ID": "id-68608"
-        },
-        {
-          "ap2Name": "geometry",
-          "ap1ID": "id-68612",
-          "ap2ID": "id-68613"
-        },
-        {
-          "ap2Name": "geometry2",
-          "ap1ID": "id-68613",
-          "ap2ID": "id-68614"
-        },
-        {
-          "ap2Name": "Shape",
-          "ap1ID": "id-68614",
-          "ap2ID": "id-68615"
-        },
-        {
-          "ap2Name": "geometry",
-          "ap1ID": "id-68615",
-          "ap2ID": "id-68609"
-        },
-        {
-          "ap2Name": "diameter",
-          "ap1ID": "id-68681",
-          "ap2ID": "id-68603"
-        },
-        {
-          "ap2Name": "x",
-          "ap1ID": "id-68681",
-          "ap2ID": "id-68604"
-        },
-        {
-          "ap2Name": "y",
-          "ap1ID": "id-68684",
-          "ap2ID": "id-68604"
-        }
-      ],
-      "fileTypeVersion": 1
-    },
-    {
       "atomType": "Rotate",
       "x": 0.30078125,
       "y": 0.42,
@@ -527,8 +79,7 @@
         },
         {
           "name": "y-axis degrees",
-          "ioValue": -40,
-          "currentEquation": "-40"
+          "ioValue": -40
         },
         {
           "name": "z-axis degrees",
@@ -539,9 +90,128 @@
     {
       "atomType": "Input",
       "x": 0.025384615384615384,
-      "y": 0.6085714285714285,
+      "y": 0.3384615384615385,
       "uniqueID": "id-68693",
       "name": "BrassDiam"
+    },
+    {
+      "atomType": "Move",
+      "x": 0.28450520833333337,
+      "y": 0.8485714285714286,
+      "uniqueID": "id-68779",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": -7
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0
+        }
+      ]
+    },
+    {
+      "atomType": "Difference",
+      "x": 0.3951822916666667,
+      "y": 0.7771428571428571,
+      "uniqueID": "id-68785",
+      "ioValues": [
+        {
+          "name": "retain",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "remove",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.48307291666666663,
+      "y": 0.8085714285714286,
+      "uniqueID": "id-68789",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": 2
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 2.5,
+          "currentEquation": "2.5"
+        }
+      ]
+    },
+    {
+      "atomType": "Fusion",
+      "x": 0.6927083333333334,
+      "y": 0.2942857142857143,
+      "uniqueID": "id-68795",
+      "ioValues": [],
+      "unionType": "Fusion"
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.62109375,
+      "y": 0.8371428571428572,
+      "uniqueID": "id-68800",
+      "ioValues": [
+        {
+          "name": "Shape 2",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 3",
+          "ioValue": null
+        }
+      ]
+    },
+    {
+      "atomType": "Export",
+      "x": 0.7630208333333334,
+      "y": 0.7457142857142858,
+      "uniqueID": "id-68806",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "File Type",
+          "ioValue": "STL",
+          "currentEquation": "STL"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "VeneerFixturePart1v2",
+          "currentEquation": "VeneerFixturePart1v2"
+        }
+      ],
+      "type": "STL",
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "VeneerFixturePart1v2"
     },
     {
       "atomType": "Molecule",
@@ -707,7 +377,7 @@
         {
           "atomType": "Input",
           "x": 0.025384615384615384,
-          "y": 0.4,
+          "y": 0.15384615384615385,
           "uniqueID": "id-68776",
           "name": "holediam"
         }
@@ -762,10 +432,491 @@
       "fileTypeVersion": 1
     },
     {
+      "atomType": "Molecule",
+      "x": 0.20052083333333334,
+      "y": 0.2885714285714286,
+      "uniqueID": "id-68599",
+      "name": "HoldyPart",
+      "ioValues": [
+        {
+          "name": "bigdiam",
+          "ioValue": 367.5
+        },
+        {
+          "name": "groovesize",
+          "ioValue": 0.6
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-68601",
+          "ioValues": [
+            {
+              "name": "number or geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Circle",
+          "x": 0.2830729166666667,
+          "y": 0.1757142857142857,
+          "uniqueID": "id-68603",
+          "ioValues": [
+            {
+              "name": "diameter",
+              "ioValue": 367.5,
+              "currentEquation": "ArcDiamMM"
+            }
+          ]
+        },
+        {
+          "atomType": "Equation",
+          "x": 0.27395833333333336,
+          "y": 0.46714285714285714,
+          "uniqueID": "id-68604",
+          "name": "x - (2* y)",
+          "ioValues": [
+            {
+              "name": "x",
+              "ioValue": 367.5
+            },
+            {
+              "name": "y",
+              "ioValue": 0.6
+            }
+          ],
+          "currentEquation": "x - (2* y)"
+        },
+        {
+          "atomType": "Circle",
+          "x": 0.3553385416666667,
+          "y": 0.3157142857142857,
+          "uniqueID": "id-68605",
+          "ioValues": [
+            {
+              "name": "diameter",
+              "ioValue": 366.3
+            }
+          ]
+        },
+        {
+          "atomType": "Difference",
+          "x": 0.4276041666666667,
+          "y": 0.16999999999999998,
+          "uniqueID": "id-68606",
+          "ioValues": [
+            {
+              "name": "retain",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "remove",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Extrude",
+          "x": 0.5141927083333334,
+          "y": 0.2642857142857143,
+          "uniqueID": "id-68607",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "height",
+              "ioValue": 5
+            }
+          ]
+        },
+        {
+          "atomType": "Color",
+          "x": 0.6658854166666667,
+          "y": 0.22999999999999998,
+          "uniqueID": "id-68608",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ],
+          "selectedColor": "Keep Out"
+        },
+        {
+          "atomType": "Move",
+          "x": 0.6880208333333334,
+          "y": 0.7214285714285714,
+          "uniqueID": "id-68609",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "xDist",
+              "ioValue": 0
+            },
+            {
+              "name": "yDist",
+              "ioValue": 0
+            },
+            {
+              "name": "zDist",
+              "ioValue": 1.6666666666666667,
+              "currentEquation": "height / 3"
+            }
+          ]
+        },
+        {
+          "atomType": "Assembly",
+          "x": 0.7921875,
+          "y": 0.4528571428571429,
+          "uniqueID": "id-68610",
+          "ioValues": [
+            {
+              "name": "Shape 1",
+              "ioValue": null
+            },
+            {
+              "name": "Shape 2",
+              "ioValue": null
+            }
+          ]
+        },
+        {
+          "atomType": "Move",
+          "x": 0.4673177083333333,
+          "y": 0.5385714285714286,
+          "uniqueID": "id-68611",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "xDist",
+              "ioValue": -183.75,
+              "currentEquation": "-ArcDiamMM / 2"
+            },
+            {
+              "name": "yDist",
+              "ioValue": 0
+            },
+            {
+              "name": "zDist",
+              "ioValue": 0
+            }
+          ]
+        },
+        {
+          "atomType": "Rectangle",
+          "x": 0.3006510416666667,
+          "y": 0.7614285714285715,
+          "uniqueID": "id-68612",
+          "ioValues": [
+            {
+              "name": "x length",
+              "ioValue": 100
+            },
+            {
+              "name": "y length",
+              "ioValue": 50
+            }
+          ]
+        },
+        {
+          "atomType": "Extrude",
+          "x": 0.39895833333333336,
+          "y": 0.8014285714285714,
+          "uniqueID": "id-68613",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "height",
+              "ioValue": 10,
+              "currentEquation": "height * 2"
+            }
+          ]
+        },
+        {
+          "atomType": "Intersection",
+          "x": 0.473828125,
+          "y": 0.8042857142857142,
+          "uniqueID": "id-68614",
+          "ioValues": [
+            {
+              "name": "geometry1",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "geometry2",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.15384615384615385,
+          "uniqueID": "id-68681",
+          "name": "bigdiam"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.24615384615384617,
+          "uniqueID": "id-68684",
+          "name": "groovesize"
+        },
+        {
+          "atomType": "GitHubMolecule",
+          "x": 0.5747395833333334,
+          "y": 0.6928571428571427,
+          "uniqueID": "id-68615",
+          "name": "util.Offset",
+          "ioValues": [
+            {
+              "name": "Shape",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Offset",
+              "ioValue": 1.5
+            }
+          ],
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 0.98,
+              "y": 0.5,
+              "uniqueID": "id-68616",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Code",
+              "x": 0.36328124999999994,
+              "y": 0.5657142857142857,
+              "uniqueID": "id-68617",
+              "ioValues": [
+                {
+                  "name": "shape",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "offset",
+                  "ioValue": 1.5
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "function run(shape: Assembly, offset: number = 1) {\n  return shape.onLeafs((leaf) => {\n    console.log(leaf)\n    if (leaf.geometry instanceof replicad.Drawing) {\n      throw new Error(\"Drawings not supported for this type of offset\")\n    }\n\n    const oc = replicad.getOC();\n    const progress = new oc.Message_ProgressRange_1();\n    const offsetBuilder = new oc.BRepOffsetAPI_MakeOffsetShape();\n    offsetBuilder.PerformByJoin(\n      leaf.geometry.wrapped,\n      offset,\n      0.000001,\n      oc.BRepOffset_Mode.BRepOffset_Skin,\n      true, // for interior offsets this seems to work better when set to true.\n      false,\n      oc.GeomAbs_JoinType.GeomAbs_Arc,\n      false,\n      progress\n    );\n\n    //      offsetBuilder.PerformBySimple(leaf.geometry.wrapped, offset)\n    leaf.geometry = replicad.cast(replicad.downcast(offsetBuilder.Shape()))\n    if (leaf.geometry instanceof replicad.Shell) {\n      console.log(\"got shell, trying to make solid\")\n      leaf.geometry = replicad.makeSolid([leaf.geometry])\n    }\n\n    offsetBuilder.delete();\n    progress.delete();\n\n    return leaf;\n    //leaf.geometry = replicad.makeOffset(leaf.geometry, offset);\n  })\n}",
+              "compiledCode": "\"use strict\";\nfunction run(shape, offset = 1) {\n    return shape.onLeafs((leaf) => {\n        console.log(leaf);\n        if (leaf.geometry instanceof replicad.Drawing) {\n            throw new Error(\"Drawings not supported for this type of offset\");\n        }\n        const oc = replicad.getOC();\n        const progress = new oc.Message_ProgressRange_1();\n        const offsetBuilder = new oc.BRepOffsetAPI_MakeOffsetShape();\n        offsetBuilder.PerformByJoin(leaf.geometry.wrapped, offset, 0.000001, oc.BRepOffset_Mode.BRepOffset_Skin, true, // for interior offsets this seems to work better when set to true.\n        false, oc.GeomAbs_JoinType.GeomAbs_Arc, false, progress);\n        //      offsetBuilder.PerformBySimple(leaf.geometry.wrapped, offset)\n        leaf.geometry = replicad.cast(replicad.downcast(offsetBuilder.Shape()));\n        if (leaf.geometry instanceof replicad.Shell) {\n            console.log(\"got shell, trying to make solid\");\n            leaf.geometry = replicad.makeSolid([leaf.geometry]);\n        }\n        offsetBuilder.delete();\n        progress.delete();\n        return leaf;\n        //leaf.geometry = replicad.makeOffset(leaf.geometry, offset);\n    });\n}\n"
+            },
+            {
+              "atomType": "Input",
+              "x": 0.025384615384615384,
+              "y": 0.15384615384615385,
+              "uniqueID": "id-68618",
+              "name": "Shape",
+              "type": "geometry"
+            },
+            {
+              "atomType": "Input",
+              "x": 0.025384615384615384,
+              "y": 0.24615384615384617,
+              "uniqueID": "id-68619",
+              "name": "Offset"
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-68617",
+              "ap2ID": "id-68616"
+            },
+            {
+              "ap2Name": "shape",
+              "ap1ID": "id-68618",
+              "ap2ID": "id-68617"
+            },
+            {
+              "ap2Name": "offset",
+              "ap1ID": "id-68619",
+              "ap2ID": "id-68617"
+            }
+          ],
+          "parentRepo": {
+            "privateRepo": false,
+            "repoName": "util.Offset",
+            "dateCreated": "2026-07-17T21:53:37Z",
+            "readMe": "https://raw.githubusercontent.com/tristan-huber/util.Offset/master/README.md?sanitize=true",
+            "yyyy": 2026,
+            "topMoleculeID": "id-66747",
+            "githubMoleculesUsed": [],
+            "html_url": "https://github.com/tristan-huber/util.Offset",
+            "topics": [
+              "abundance-tool"
+            ],
+            "parentRepo": null,
+            "forks": 0,
+            "dateModified": "739814",
+            "ranking": 0,
+            "searchField": "util.offset tristan-huber offset an assembly of solids by some constant distance. positive value corresponds to a larger result, negative offsets correspond to a smaller result. abundance-tool",
+            "owner": "tristan-huber",
+            "description": "Offset an assembly of solids by some constant distance. Positive value corresponds to a larger result, negative offsets correspond to a smaller result.",
+            "contentURL": "https://raw.githubusercontent.com/tristan-huber/util.Offset/master/project.abundance?sanitize=true",
+            "svgURL": "https://raw.githubusercontent.com/tristan-huber/util.Offset/master/project.svg?sanitize=true",
+            "isLocal": false
+          },
+          "unitsKey": "Unitless",
+          "fileTypeVersion": 1,
+          "lastReloadedFromGithubAt": 1784326800179
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "retain",
+          "ap1ID": "id-68603",
+          "ap2ID": "id-68606"
+        },
+        {
+          "ap2Name": "diameter",
+          "ap1ID": "id-68604",
+          "ap2ID": "id-68605"
+        },
+        {
+          "ap2Name": "remove",
+          "ap1ID": "id-68605",
+          "ap2ID": "id-68606"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-68606",
+          "ap2ID": "id-68607"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-68607",
+          "ap2ID": "id-68611"
+        },
+        {
+          "ap2Name": "Shape 2",
+          "ap1ID": "id-68608",
+          "ap2ID": "id-68610"
+        },
+        {
+          "ap2Name": "Shape 1",
+          "ap1ID": "id-68609",
+          "ap2ID": "id-68610"
+        },
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-68610",
+          "ap2ID": "id-68601"
+        },
+        {
+          "ap2Name": "geometry1",
+          "ap1ID": "id-68611",
+          "ap2ID": "id-68614"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-68611",
+          "ap2ID": "id-68608"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-68612",
+          "ap2ID": "id-68613"
+        },
+        {
+          "ap2Name": "geometry2",
+          "ap1ID": "id-68613",
+          "ap2ID": "id-68614"
+        },
+        {
+          "ap2Name": "Shape",
+          "ap1ID": "id-68614",
+          "ap2ID": "id-68615"
+        },
+        {
+          "ap2Name": "diameter",
+          "ap1ID": "id-68681",
+          "ap2ID": "id-68603"
+        },
+        {
+          "ap2Name": "x",
+          "ap1ID": "id-68681",
+          "ap2ID": "id-68604"
+        },
+        {
+          "ap2Name": "y",
+          "ap1ID": "id-68684",
+          "ap2ID": "id-68604"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-68615",
+          "ap2ID": "id-68609"
+        }
+      ],
+      "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Rectangle",
+      "x": 0.4700520833333333,
+      "y": 0.3,
+      "uniqueID": "id-68935",
+      "ioValues": [
+        {
+          "name": "x length",
+          "ioValue": 100,
+          "currentEquation": "100"
+        },
+        {
+          "name": "y length",
+          "ioValue": 100,
+          "currentEquation": "100"
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.5,
+      "y": 0.5,
+      "uniqueID": "id-68939",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": -10,
+          "currentEquation": "-10"
+        }
+      ]
+    },
+    {
       "atomType": "Move",
-      "x": 0.28450520833333337,
-      "y": 0.8485714285714286,
-      "uniqueID": "id-68779",
+      "x": 0.5748697916666666,
+      "y": 0.5485714285714286,
+      "uniqueID": "id-68943",
       "ioValues": [
         {
           "name": "geometry",
@@ -773,7 +924,7 @@
         },
         {
           "name": "xDist",
-          "ioValue": -7
+          "ioValue": 0
         },
         {
           "name": "yDist",
@@ -781,15 +932,16 @@
         },
         {
           "name": "zDist",
-          "ioValue": 0
+          "ioValue": -1,
+          "currentEquation": "-1"
         }
       ]
     },
     {
       "atomType": "Difference",
-      "x": 0.3951822916666667,
-      "y": 0.7771428571428571,
-      "uniqueID": "id-68785",
+      "x": 0.7180989583333334,
+      "y": 0.48571428571428577,
+      "uniqueID": "id-68949",
       "ioValues": [
         {
           "name": "retain",
@@ -800,85 +952,6 @@
           "ioValue": "__GEOMETRY_INPUT__"
         }
       ]
-    },
-    {
-      "atomType": "Move",
-      "x": 0.48307291666666663,
-      "y": 0.8085714285714286,
-      "uniqueID": "id-68789",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "xDist",
-          "ioValue": 1.5,
-          "currentEquation": "1.5"
-        },
-        {
-          "name": "yDist",
-          "ioValue": 0
-        },
-        {
-          "name": "zDist",
-          "ioValue": 3
-        }
-      ]
-    },
-    {
-      "atomType": "Fusion",
-      "x": 0.63671875,
-      "y": 0.4085714285714286,
-      "uniqueID": "id-68795",
-      "ioValues": [],
-      "unionType": "Fusion"
-    },
-    {
-      "atomType": "Assembly",
-      "x": 0.62109375,
-      "y": 0.8371428571428572,
-      "uniqueID": "id-68800",
-      "ioValues": [
-        {
-          "name": "Shape 2",
-          "ioValue": null
-        },
-        {
-          "name": "Shape 3",
-          "ioValue": null
-        }
-      ]
-    },
-    {
-      "atomType": "Export",
-      "x": 0.7630208333333334,
-      "y": 0.7457142857142858,
-      "uniqueID": "id-68806",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "File Type",
-          "ioValue": "STL",
-          "currentEquation": "STL"
-        },
-        {
-          "name": "Resolution (dpi)",
-          "ioValue": 96
-        },
-        {
-          "name": "Part Name",
-          "ioValue": "VeneerFixturePart1",
-          "currentEquation": "VeneerFixturePart1"
-        }
-      ],
-      "type": "STL",
-      "resolution": 96,
-      "importIndex": 0,
-      "partName": "VeneerFixturePart1"
     }
   ],
   "allConnectors": [
@@ -891,16 +964,6 @@
       "ap2Name": "bigdiam",
       "ap1ID": "id-68438",
       "ap2ID": "id-68599"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-68599",
-      "ap2ID": "id-68687"
-    },
-    {
-      "ap2Name": "number or geometry",
-      "ap1ID": "id-68687",
-      "ap2ID": "id-68430"
     },
     {
       "ap2Name": "remove",
@@ -918,11 +981,6 @@
       "ap2ID": "id-68730"
     },
     {
-      "ap2Name": "geometry",
-      "ap1ID": "id-68730",
-      "ap2ID": "id-68779"
-    },
-    {
       "ap2Name": "retain",
       "ap1ID": "id-68779",
       "ap2ID": "id-68785"
@@ -938,8 +996,43 @@
       "ap2ID": "id-68800"
     },
     {
-      "ap2Name": "geometry",
+      "ap2Name": "number or geometry",
       "ap1ID": "id-68800",
+      "ap2ID": "id-68430"
+    },
+    {
+      "ap2Name": "retain",
+      "ap1ID": "id-68800",
+      "ap2ID": "id-68949"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-68730",
+      "ap2ID": "id-68779"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-68599",
+      "ap2ID": "id-68687"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-68935",
+      "ap2ID": "id-68939"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-68939",
+      "ap2ID": "id-68943"
+    },
+    {
+      "ap2Name": "remove",
+      "ap1ID": "id-68943",
+      "ap2ID": "id-68949"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-68949",
       "ap2ID": "id-68806"
     }
   ],
