@@ -8,6 +8,7 @@
 
 - **VeneerThickness** (number)
 - **ArcDiamMM** (number)
+- **BrassDiam** (number)
 
 
 
