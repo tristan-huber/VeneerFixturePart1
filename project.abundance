@@ -7,7 +7,8 @@
   "ioValues": [
     {
       "name": "VeneerThickness",
-      "ioValue": 1.5
+      "ioValue": 0.6,
+      "currentEquation": "0.6"
     },
     {
       "name": "ArcDiamMM",
@@ -77,7 +78,7 @@
         },
         {
           "name": "groovesize",
-          "ioValue": 1.5
+          "ioValue": 0.6
         }
       ],
       "topLevel": false,
@@ -120,7 +121,7 @@
             },
             {
               "name": "y",
-              "ioValue": 1.5
+              "ioValue": 0.6
             }
           ],
           "currentEquation": "x - y"
@@ -133,7 +134,7 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 366
+              "ioValue": 366.9
             }
           ]
         },
