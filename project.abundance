@@ -7,8 +7,7 @@
   "ioValues": [
     {
       "name": "VeneerThickness",
-      "ioValue": 1.5,
-      "currentEquation": "1.5"
+      "ioValue": 1.5
     },
     {
       "name": "ArcDiamMM",
@@ -38,22 +37,21 @@
       "ioValues": [
         {
           "name": "diameter",
-          "ioValue": 367.5,
-          "currentEquation": "15"
+          "ioValue": 367.5
         }
       ]
     },
     {
       "atomType": "Input",
       "x": 0.025384615384615384,
-      "y": 0.5314285714285714,
+      "y": 0.15384615384615385,
       "uniqueID": "id-68435",
       "name": "VeneerThickness"
     },
     {
       "atomType": "Input",
       "x": 0.025384615384615384,
-      "y": 0.3257142857142857,
+      "y": 0.24615384615384617,
       "uniqueID": "id-68438",
       "name": "ArcDiamMM"
     },
@@ -115,8 +113,7 @@
         },
         {
           "name": "height",
-          "ioValue": 5,
-          "currentEquation": "-15"
+          "ioValue": 5
         }
       ]
     },
@@ -142,119 +139,9 @@
       "value": 5
     },
     {
-      "atomType": "GitHubMolecule",
-      "x": 0.5143229166666667,
-      "y": 0.48571428571428577,
-      "uniqueID": "id-68470",
-      "name": "util.Offset",
-      "ioValues": [
-        {
-          "name": "Shape",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "Offset",
-          "ioValue": 1.5,
-          "currentEquation": "1.5"
-        }
-      ],
-      "topLevel": false,
-      "allAtoms": [
-        {
-          "atomType": "Output",
-          "x": 0.98,
-          "y": 0.5,
-          "uniqueID": "id-68466",
-          "ioValues": [
-            {
-              "name": "number or geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
-        },
-        {
-          "atomType": "Code",
-          "x": 0.36328124999999994,
-          "y": 0.5657142857142857,
-          "uniqueID": "id-68467",
-          "ioValues": [
-            {
-              "name": "shape",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "offset",
-              "ioValue": 1.5
-            }
-          ],
-          "interpreterVersion": 1,
-          "code": "function run(shape: Assembly, offset: number = 1) {\n  return shape.onLeafs((leaf) => {\n    console.log(leaf)\n    if (leaf.geometry instanceof replicad.Drawing) {\n      throw new Error(\"Drawings not supported for this type of offset\")\n    }\n\n    const oc = replicad.getOC();\n    const progress = new oc.Message_ProgressRange_1();\n    const offsetBuilder = new oc.BRepOffsetAPI_MakeOffsetShape();\n    offsetBuilder.PerformByJoin(\n      leaf.geometry.wrapped,\n      offset,\n      0.000001,\n      oc.BRepOffset_Mode.BRepOffset_Skin,\n      true, // for interior offsets this seems to work better when set to true.\n      false,\n      oc.GeomAbs_JoinType.GeomAbs_Arc,\n      false,\n      progress\n    );\n\n    //      offsetBuilder.PerformBySimple(leaf.geometry.wrapped, offset)\n    leaf.geometry = replicad.cast(replicad.downcast(offsetBuilder.Shape()))\n    offsetBuilder.delete();\n    progress.delete();\n\n    return leaf;\n    //leaf.geometry = replicad.makeOffset(leaf.geometry, offset);\n  })\n}",
-          "compiledCode": "\"use strict\";\nfunction run(shape, offset = 1) {\n    return shape.onLeafs((leaf) => {\n        console.log(leaf);\n        if (leaf.geometry instanceof replicad.Drawing) {\n            throw new Error(\"Drawings not supported for this type of offset\");\n        }\n        const oc = replicad.getOC();\n        const progress = new oc.Message_ProgressRange_1();\n        const offsetBuilder = new oc.BRepOffsetAPI_MakeOffsetShape();\n        offsetBuilder.PerformByJoin(leaf.geometry.wrapped, offset, 0.000001, oc.BRepOffset_Mode.BRepOffset_Skin, true, // for interior offsets this seems to work better when set to true.\n        false, oc.GeomAbs_JoinType.GeomAbs_Arc, false, progress);\n        //      offsetBuilder.PerformBySimple(leaf.geometry.wrapped, offset)\n        leaf.geometry = replicad.cast(replicad.downcast(offsetBuilder.Shape()));\n        offsetBuilder.delete();\n        progress.delete();\n        return leaf;\n        //leaf.geometry = replicad.makeOffset(leaf.geometry, offset);\n    });\n}\n"
-        },
-        {
-          "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.15384615384615385,
-          "uniqueID": "id-68468",
-          "name": "Shape",
-          "type": "geometry"
-        },
-        {
-          "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.24615384615384617,
-          "uniqueID": "id-68469",
-          "name": "Offset"
-        }
-      ],
-      "allConnectors": [
-        {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-68467",
-          "ap2ID": "id-68466"
-        },
-        {
-          "ap2Name": "shape",
-          "ap1ID": "id-68468",
-          "ap2ID": "id-68467"
-        },
-        {
-          "ap2Name": "offset",
-          "ap1ID": "id-68469",
-          "ap2ID": "id-68467"
-        }
-      ],
-      "parentRepo": {
-        "privateRepo": false,
-        "repoName": "util.Offset",
-        "dateCreated": "2026-07-17T21:53:37Z",
-        "readMe": "https://raw.githubusercontent.com/tristan-huber/util.Offset/master/README.md?sanitize=true",
-        "yyyy": 2026,
-        "topMoleculeID": "id-66747",
-        "githubMoleculesUsed": [],
-        "html_url": "https://github.com/tristan-huber/util.Offset",
-        "topics": [
-          "abundance-tool"
-        ],
-        "parentRepo": null,
-        "forks": 0,
-        "dateModified": "739814",
-        "ranking": 0,
-        "searchField": "util.offset tristan-huber offset an assembly of solids by some constant distance. positive value corresponds to a larger result, negative offsets correspond to a smaller result. abundance-tool",
-        "owner": "tristan-huber",
-        "description": "Offset an assembly of solids by some constant distance. Positive value corresponds to a larger result, negative offsets correspond to a smaller result.",
-        "contentURL": "https://raw.githubusercontent.com/tristan-huber/util.Offset/master/project.abundance?sanitize=true",
-        "svgURL": "https://raw.githubusercontent.com/tristan-huber/util.Offset/master/project.svg?sanitize=true",
-        "isLocal": false
-      },
-      "unitsKey": "Unitless",
-      "fileTypeVersion": 1,
-      "lastReloadedFromGithubAt": 1784325954904
-    },
-    {
       "atomType": "Move",
-      "x": 0.73046875,
-      "y": 0.8028571428571428,
+      "x": 0.6380208333333334,
+      "y": 0.7714285714285715,
       "uniqueID": "id-68482",
       "ioValues": [
         {
@@ -333,8 +220,7 @@
       "ioValues": [
         {
           "name": "x length",
-          "ioValue": 100,
-          "currentEquation": "100"
+          "ioValue": 100
         },
         {
           "name": "y length",
@@ -376,39 +262,113 @@
       ]
     },
     {
-      "atomType": "Intersection",
-      "x": 0.6334635416666667,
-      "y": 0.7171428571428571,
-      "uniqueID": "id-68513",
+      "atomType": "GitHubMolecule",
+      "x": 0.5247395833333334,
+      "y": 0.7428571428571428,
+      "uniqueID": "id-68587",
+      "name": "util.Offset",
       "ioValues": [
         {
-          "name": "geometry1",
+          "name": "Shape",
           "ioValue": "__GEOMETRY_INPUT__"
         },
         {
-          "name": "geometry2",
-          "ioValue": "__GEOMETRY_INPUT__"
-        }
-      ]
-    },
-    {
-      "atomType": "Code",
-      "x": 0.537109375,
-      "y": 0.8114285714285715,
-      "uniqueID": "id-68517",
-      "ioValues": [
-        {
-          "name": "shape",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "offset",
-          "ioValue": 1
+          "name": "Offset",
+          "ioValue": 1.5
         }
       ],
-      "interpreterVersion": 1,
-      "code": "function run(shape: Assembly, offset: number = 1) {\n  return shape.onLeafs((leaf) => {\n    console.log(leaf)\n    if (leaf.geometry instanceof replicad.Drawing) {\n      throw new Error(\"Drawings not supported for this type of offset\")\n    }\n\n    const oc = replicad.getOC();\n    const progress = new oc.Message_ProgressRange_1();\n    const offsetBuilder = new oc.BRepOffsetAPI_MakeOffsetShape();\n    offsetBuilder.PerformByJoin(\n      leaf.geometry.wrapped,\n      offset,\n      0.000001,\n      oc.BRepOffset_Mode.BRepOffset_Skin,\n      true, // for interior offsets this seems to work better when set to true.\n      false,\n      oc.GeomAbs_JoinType.GeomAbs_Intersection,\n      false,\n      progress\n    );\n\n    //      offsetBuilder.PerformBySimple(leaf.geometry.wrapped, offset)\n    leaf.geometry = replicad.cast(replicad.downcast(offsetBuilder.Shape()))\n    if (leaf.geometry instanceof replicad.Shell) {\n      leaf.geometry = replicad.makeSolid([leaf.geometry])\n    }\n    console.log(leaf.geometry instanceof replicad.Shell)\n\n\n\n    offsetBuilder.delete();\n    progress.delete();\n\n    return leaf;\n    //leaf.geometry = replicad.makeOffset(leaf.geometry, offset);\n  })\n}",
-      "compiledCode": "\"use strict\";\nfunction run(shape, offset = 1) {\n    return shape.onLeafs((leaf) => {\n        console.log(leaf);\n        if (leaf.geometry instanceof replicad.Drawing) {\n            throw new Error(\"Drawings not supported for this type of offset\");\n        }\n        const oc = replicad.getOC();\n        const progress = new oc.Message_ProgressRange_1();\n        const offsetBuilder = new oc.BRepOffsetAPI_MakeOffsetShape();\n        offsetBuilder.PerformByJoin(leaf.geometry.wrapped, offset, 0.000001, oc.BRepOffset_Mode.BRepOffset_Skin, true, // for interior offsets this seems to work better when set to true.\n        false, oc.GeomAbs_JoinType.GeomAbs_Intersection, false, progress);\n        //      offsetBuilder.PerformBySimple(leaf.geometry.wrapped, offset)\n        leaf.geometry = replicad.cast(replicad.downcast(offsetBuilder.Shape()));\n        if (leaf.geometry instanceof replicad.Shell) {\n            leaf.geometry = replicad.makeSolid([leaf.geometry]);\n        }\n        console.log(leaf.geometry instanceof replicad.Shell);\n        offsetBuilder.delete();\n        progress.delete();\n        return leaf;\n        //leaf.geometry = replicad.makeOffset(leaf.geometry, offset);\n    });\n}\n"
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-68583",
+          "ioValues": [
+            {
+              "name": "number or geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Code",
+          "x": 0.36328124999999994,
+          "y": 0.5657142857142857,
+          "uniqueID": "id-68584",
+          "ioValues": [
+            {
+              "name": "shape",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "offset",
+              "ioValue": 1.5
+            }
+          ],
+          "interpreterVersion": 1,
+          "code": "function run(shape: Assembly, offset: number = 1) {\n  return shape.onLeafs((leaf) => {\n    console.log(leaf)\n    if (leaf.geometry instanceof replicad.Drawing) {\n      throw new Error(\"Drawings not supported for this type of offset\")\n    }\n\n    const oc = replicad.getOC();\n    const progress = new oc.Message_ProgressRange_1();\n    const offsetBuilder = new oc.BRepOffsetAPI_MakeOffsetShape();\n    offsetBuilder.PerformByJoin(\n      leaf.geometry.wrapped,\n      offset,\n      0.000001,\n      oc.BRepOffset_Mode.BRepOffset_Skin,\n      true, // for interior offsets this seems to work better when set to true.\n      false,\n      oc.GeomAbs_JoinType.GeomAbs_Arc,\n      false,\n      progress\n    );\n\n    //      offsetBuilder.PerformBySimple(leaf.geometry.wrapped, offset)\n    leaf.geometry = replicad.cast(replicad.downcast(offsetBuilder.Shape()))\n    if (leaf.geometry instanceof replicad.Shell) {\n      console.log(\"got shell, trying to make solid\")\n      leaf.geometry = replicad.makeSolid([leaf.geometry])\n    }\n\n    offsetBuilder.delete();\n    progress.delete();\n\n    return leaf;\n    //leaf.geometry = replicad.makeOffset(leaf.geometry, offset);\n  })\n}",
+          "compiledCode": "\"use strict\";\nfunction run(shape, offset = 1) {\n    return shape.onLeafs((leaf) => {\n        console.log(leaf);\n        if (leaf.geometry instanceof replicad.Drawing) {\n            throw new Error(\"Drawings not supported for this type of offset\");\n        }\n        const oc = replicad.getOC();\n        const progress = new oc.Message_ProgressRange_1();\n        const offsetBuilder = new oc.BRepOffsetAPI_MakeOffsetShape();\n        offsetBuilder.PerformByJoin(leaf.geometry.wrapped, offset, 0.000001, oc.BRepOffset_Mode.BRepOffset_Skin, true, // for interior offsets this seems to work better when set to true.\n        false, oc.GeomAbs_JoinType.GeomAbs_Arc, false, progress);\n        //      offsetBuilder.PerformBySimple(leaf.geometry.wrapped, offset)\n        leaf.geometry = replicad.cast(replicad.downcast(offsetBuilder.Shape()));\n        if (leaf.geometry instanceof replicad.Shell) {\n            console.log(\"got shell, trying to make solid\");\n            leaf.geometry = replicad.makeSolid([leaf.geometry]);\n        }\n        offsetBuilder.delete();\n        progress.delete();\n        return leaf;\n        //leaf.geometry = replicad.makeOffset(leaf.geometry, offset);\n    });\n}\n"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.15384615384615385,
+          "uniqueID": "id-68585",
+          "name": "Shape",
+          "type": "geometry"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.24615384615384617,
+          "uniqueID": "id-68586",
+          "name": "Offset"
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-68584",
+          "ap2ID": "id-68583"
+        },
+        {
+          "ap2Name": "shape",
+          "ap1ID": "id-68585",
+          "ap2ID": "id-68584"
+        },
+        {
+          "ap2Name": "offset",
+          "ap1ID": "id-68586",
+          "ap2ID": "id-68584"
+        }
+      ],
+      "parentRepo": {
+        "privateRepo": false,
+        "repoName": "util.Offset",
+        "dateCreated": "2026-07-17T21:53:37Z",
+        "readMe": "https://raw.githubusercontent.com/tristan-huber/util.Offset/master/README.md?sanitize=true",
+        "yyyy": 2026,
+        "topMoleculeID": "id-66747",
+        "githubMoleculesUsed": [],
+        "html_url": "https://github.com/tristan-huber/util.Offset",
+        "topics": [
+          "abundance-tool"
+        ],
+        "parentRepo": null,
+        "forks": 0,
+        "dateModified": "739814",
+        "ranking": 0,
+        "searchField": "util.offset tristan-huber offset an assembly of solids by some constant distance. positive value corresponds to a larger result, negative offsets correspond to a smaller result. abundance-tool",
+        "owner": "tristan-huber",
+        "description": "Offset an assembly of solids by some constant distance. Positive value corresponds to a larger result, negative offsets correspond to a smaller result.",
+        "contentURL": "https://raw.githubusercontent.com/tristan-huber/util.Offset/master/project.abundance?sanitize=true",
+        "svgURL": "https://raw.githubusercontent.com/tristan-huber/util.Offset/master/project.svg?sanitize=true",
+        "isLocal": false
+      },
+      "unitsKey": "Unitless",
+      "fileTypeVersion": 1,
+      "lastReloadedFromGithubAt": 1784326800179
     }
   ],
   "allConnectors": [
@@ -463,11 +423,6 @@
       "ap2ID": "id-68452"
     },
     {
-      "ap2Name": "geometry",
-      "ap1ID": "id-68470",
-      "ap2ID": "id-68482"
-    },
-    {
       "ap2Name": "Shape 1",
       "ap1ID": "id-68482",
       "ap2ID": "id-68488"
@@ -498,24 +453,14 @@
       "ap2ID": "id-68509"
     },
     {
-      "ap2Name": "geometry2",
-      "ap1ID": "id-68505",
-      "ap2ID": "id-68513"
-    },
-    {
       "ap2Name": "Shape",
       "ap1ID": "id-68509",
-      "ap2ID": "id-68470"
+      "ap2ID": "id-68587"
     },
     {
-      "ap2Name": "shape",
-      "ap1ID": "id-68509",
-      "ap2ID": "id-68517"
-    },
-    {
-      "ap2Name": "geometry1",
-      "ap1ID": "id-68517",
-      "ap2ID": "id-68513"
+      "ap2Name": "geometry",
+      "ap1ID": "id-68587",
+      "ap2ID": "id-68482"
     }
   ],
   "unitsKey": "MM",
