@@ -16,7 +16,7 @@
     },
     {
       "name": "BrassDiam",
-      "ioValue": 3.5
+      "ioValue": 3.7
     }
   ],
   "topLevel": true,
@@ -146,7 +146,8 @@
         },
         {
           "name": "xDist",
-          "ioValue": 2
+          "ioValue": 1.95,
+          "currentEquation": "1.95"
         },
         {
           "name": "yDist",
@@ -154,8 +155,7 @@
         },
         {
           "name": "zDist",
-          "ioValue": 2.5,
-          "currentEquation": "2.5"
+          "ioValue": 3
         }
       ]
     },
@@ -204,14 +204,14 @@
         },
         {
           "name": "Part Name",
-          "ioValue": "VeneerFixturePart1v2",
-          "currentEquation": "VeneerFixturePart1v2"
+          "ioValue": "VeneerFixturePart1v3",
+          "currentEquation": "VeneerFixturePart1v3"
         }
       ],
       "type": "STL",
       "resolution": 96,
       "importIndex": 0,
-      "partName": "VeneerFixturePart1v2"
+      "partName": "VeneerFixturePart1v3"
     },
     {
       "atomType": "Molecule",
@@ -222,7 +222,8 @@
       "ioValues": [
         {
           "name": "holediam",
-          "ioValue": 3.5
+          "ioValue": 3.7,
+          "currentEquation": "3.5"
         }
       ],
       "topLevel": false,
@@ -247,7 +248,7 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 3.5
+              "ioValue": 3.7
             }
           ]
         },
@@ -313,8 +314,7 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 7.5,
-              "currentEquation": "holediam + 4"
+              "ioValue": 7
             }
           ]
         },
@@ -932,8 +932,8 @@
         },
         {
           "name": "zDist",
-          "ioValue": -1,
-          "currentEquation": "-1"
+          "ioValue": -0.5,
+          "currentEquation": "-0.5"
         }
       ]
     },
