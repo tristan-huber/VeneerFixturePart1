@@ -122,7 +122,7 @@
     },
     {
       "atomType": "Color",
-      "x": 0.5540364583333334,
+      "x": 0.6158854166666666,
       "y": 0.27999999999999997,
       "uniqueID": "id-68456",
       "ioValues": [
@@ -143,8 +143,8 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.5221354166666666,
-      "y": 0.8942857142857142,
+      "x": 0.5143229166666667,
+      "y": 0.48571428571428577,
       "uniqueID": "id-68470",
       "name": "util.Offset",
       "ioValues": [
@@ -253,8 +253,8 @@
     },
     {
       "atomType": "Move",
-      "x": 0.5299479166666666,
-      "y": 0.6228571428571429,
+      "x": 0.73046875,
+      "y": 0.8028571428571428,
       "uniqueID": "id-68482",
       "ioValues": [
         {
@@ -278,8 +278,8 @@
     },
     {
       "atomType": "Assembly",
-      "x": 0.673828125,
-      "y": 0.4342857142857143,
+      "x": 0.7903645833333334,
+      "y": 0.44857142857142857,
       "uniqueID": "id-68488",
       "ioValues": [
         {
@@ -294,8 +294,8 @@
     },
     {
       "atomType": "Move",
-      "x": 0.6178385416666666,
-      "y": 0.6742857142857143,
+      "x": 0.4173177083333333,
+      "y": 0.5885714285714286,
       "uniqueID": "id-68493",
       "ioValues": [
         {
@@ -374,6 +374,41 @@
           "ioValue": "__GEOMETRY_INPUT__"
         }
       ]
+    },
+    {
+      "atomType": "Intersection",
+      "x": 0.6334635416666667,
+      "y": 0.7171428571428571,
+      "uniqueID": "id-68513",
+      "ioValues": [
+        {
+          "name": "geometry1",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "geometry2",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Code",
+      "x": 0.537109375,
+      "y": 0.8114285714285715,
+      "uniqueID": "id-68517",
+      "ioValues": [
+        {
+          "name": "shape",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "offset",
+          "ioValue": 1
+        }
+      ],
+      "interpreterVersion": 1,
+      "code": "function run(shape: Assembly, offset: number = 1) {\n  return shape.onLeafs((leaf) => {\n    console.log(leaf)\n    if (leaf.geometry instanceof replicad.Drawing) {\n      throw new Error(\"Drawings not supported for this type of offset\")\n    }\n\n    const oc = replicad.getOC();\n    const progress = new oc.Message_ProgressRange_1();\n    const offsetBuilder = new oc.BRepOffsetAPI_MakeOffsetShape();\n    offsetBuilder.PerformByJoin(\n      leaf.geometry.wrapped,\n      offset,\n      0.000001,\n      oc.BRepOffset_Mode.BRepOffset_Skin,\n      true, // for interior offsets this seems to work better when set to true.\n      false,\n      oc.GeomAbs_JoinType.GeomAbs_Intersection,\n      false,\n      progress\n    );\n\n    //      offsetBuilder.PerformBySimple(leaf.geometry.wrapped, offset)\n    leaf.geometry = replicad.cast(replicad.downcast(offsetBuilder.Shape()))\n    if (leaf.geometry instanceof replicad.Shell) {\n      leaf.geometry = replicad.makeSolid([leaf.geometry])\n    }\n    console.log(leaf.geometry instanceof replicad.Shell)\n\n\n\n    offsetBuilder.delete();\n    progress.delete();\n\n    return leaf;\n    //leaf.geometry = replicad.makeOffset(leaf.geometry, offset);\n  })\n}",
+      "compiledCode": "\"use strict\";\nfunction run(shape, offset = 1) {\n    return shape.onLeafs((leaf) => {\n        console.log(leaf);\n        if (leaf.geometry instanceof replicad.Drawing) {\n            throw new Error(\"Drawings not supported for this type of offset\");\n        }\n        const oc = replicad.getOC();\n        const progress = new oc.Message_ProgressRange_1();\n        const offsetBuilder = new oc.BRepOffsetAPI_MakeOffsetShape();\n        offsetBuilder.PerformByJoin(leaf.geometry.wrapped, offset, 0.000001, oc.BRepOffset_Mode.BRepOffset_Skin, true, // for interior offsets this seems to work better when set to true.\n        false, oc.GeomAbs_JoinType.GeomAbs_Intersection, false, progress);\n        //      offsetBuilder.PerformBySimple(leaf.geometry.wrapped, offset)\n        leaf.geometry = replicad.cast(replicad.downcast(offsetBuilder.Shape()));\n        if (leaf.geometry instanceof replicad.Shell) {\n            leaf.geometry = replicad.makeSolid([leaf.geometry]);\n        }\n        console.log(leaf.geometry instanceof replicad.Shell);\n        offsetBuilder.delete();\n        progress.delete();\n        return leaf;\n        //leaf.geometry = replicad.makeOffset(leaf.geometry, offset);\n    });\n}\n"
     }
   ],
   "allConnectors": [
@@ -415,11 +450,6 @@
     {
       "ap2Name": "geometry",
       "ap1ID": "id-68452",
-      "ap2ID": "id-68456"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-68452",
       "ap2ID": "id-68493"
     },
     {
@@ -448,6 +478,11 @@
       "ap2ID": "id-68509"
     },
     {
+      "ap2Name": "geometry",
+      "ap1ID": "id-68493",
+      "ap2ID": "id-68456"
+    },
+    {
       "ap2Name": "y length",
       "ap1ID": "id-68499",
       "ap2ID": "id-68501"
@@ -463,9 +498,24 @@
       "ap2ID": "id-68509"
     },
     {
+      "ap2Name": "geometry2",
+      "ap1ID": "id-68505",
+      "ap2ID": "id-68513"
+    },
+    {
       "ap2Name": "Shape",
       "ap1ID": "id-68509",
       "ap2ID": "id-68470"
+    },
+    {
+      "ap2Name": "shape",
+      "ap1ID": "id-68509",
+      "ap2ID": "id-68517"
+    },
+    {
+      "ap2Name": "geometry1",
+      "ap1ID": "id-68517",
+      "ap2ID": "id-68513"
     }
   ],
   "unitsKey": "MM",
