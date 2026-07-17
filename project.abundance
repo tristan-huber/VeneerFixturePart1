@@ -1,13 +1,182 @@
 {
-    "atomType": "Molecule",
-    "x": 0,
-    "y": 0,
-    "uniqueID": "id-68429",
-    "name": "VeneerFixturePart1",
-    "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
-    "unitsKey": "MM",
-    "fileTypeVersion": 1,
-    "filetypeVersion": 1
+  "atomType": "Molecule",
+  "x": 0,
+  "y": 0,
+  "uniqueID": "id-68429",
+  "name": "VeneerFixturePart1",
+  "ioValues": [
+    {
+      "name": "VeneerThickness",
+      "ioValue": 10,
+      "currentEquation": "10"
+    },
+    {
+      "name": "ArcDiamMM",
+      "ioValue": 367.5,
+      "currentEquation": "15 * 24.5"
+    }
+  ],
+  "topLevel": true,
+  "allAtoms": [
+    {
+      "atomType": "Output",
+      "x": 0.98,
+      "y": 0.5,
+      "uniqueID": "id-68430",
+      "ioValues": [
+        {
+          "name": "number or geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Circle",
+      "x": 0.23307291666666666,
+      "y": 0.22571428571428573,
+      "uniqueID": "id-68432",
+      "ioValues": [
+        {
+          "name": "diameter",
+          "ioValue": 367.5,
+          "currentEquation": "15"
+        }
+      ]
+    },
+    {
+      "atomType": "Input",
+      "x": 0.025384615384615384,
+      "y": 0.5314285714285714,
+      "uniqueID": "id-68435",
+      "name": "VeneerThickness"
+    },
+    {
+      "atomType": "Input",
+      "x": 0.025384615384615384,
+      "y": 0.3257142857142857,
+      "uniqueID": "id-68438",
+      "name": "ArcDiamMM"
+    },
+    {
+      "atomType": "Equation",
+      "x": 0.22395833333333334,
+      "y": 0.5171428571428571,
+      "uniqueID": "id-68441",
+      "name": "x - y",
+      "ioValues": [
+        {
+          "name": "x",
+          "ioValue": 367.5
+        },
+        {
+          "name": "y",
+          "ioValue": 10
+        }
+      ],
+      "currentEquation": "x - y"
+    },
+    {
+      "atomType": "Circle",
+      "x": 0.30598958333333337,
+      "y": 0.3485714285714286,
+      "uniqueID": "id-68445",
+      "ioValues": [
+        {
+          "name": "diameter",
+          "ioValue": 357.5
+        }
+      ]
+    },
+    {
+      "atomType": "Difference",
+      "x": 0.3776041666666667,
+      "y": 0.21999999999999997,
+      "uniqueID": "id-68448",
+      "ioValues": [
+        {
+          "name": "retain",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "remove",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.46223958333333337,
+      "y": 0.20571428571428574,
+      "uniqueID": "id-68452",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": -15,
+          "currentEquation": "-15"
+        }
+      ]
+    },
+    {
+      "atomType": "Color",
+      "x": 0.5540364583333334,
+      "y": 0.27999999999999997,
+      "uniqueID": "id-68456",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ],
+      "selectedColor": "Keep Out"
+    }
+  ],
+  "allConnectors": [
+    {
+      "ap2Name": "retain",
+      "ap1ID": "id-68432",
+      "ap2ID": "id-68448"
+    },
+    {
+      "ap2Name": "y",
+      "ap1ID": "id-68435",
+      "ap2ID": "id-68441"
+    },
+    {
+      "ap2Name": "diameter",
+      "ap1ID": "id-68438",
+      "ap2ID": "id-68432"
+    },
+    {
+      "ap2Name": "x",
+      "ap1ID": "id-68438",
+      "ap2ID": "id-68441"
+    },
+    {
+      "ap2Name": "diameter",
+      "ap1ID": "id-68441",
+      "ap2ID": "id-68445"
+    },
+    {
+      "ap2Name": "remove",
+      "ap1ID": "id-68445",
+      "ap2ID": "id-68448"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-68448",
+      "ap2ID": "id-68452"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-68452",
+      "ap2ID": "id-68456"
+    }
+  ],
+  "unitsKey": "MM",
+  "fileTypeVersion": 1,
+  "filetypeVersion": 1
 }
