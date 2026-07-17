@@ -17,8 +17,8 @@
     },
     {
       "name": "BrassDiam",
-      "ioValue": 4,
-      "currentEquation": "4"
+      "ioValue": 3.5,
+      "currentEquation": "3.5"
     }
   ],
   "topLevel": true,
@@ -552,7 +552,7 @@
       "ioValues": [
         {
           "name": "holediam",
-          "ioValue": 4
+          "ioValue": 3.5
         }
       ],
       "topLevel": false,
@@ -577,7 +577,7 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 4
+              "ioValue": 3.5
             }
           ]
         },
@@ -643,7 +643,7 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 8,
+              "ioValue": 7.5,
               "currentEquation": "holediam + 4"
             }
           ]
@@ -813,7 +813,8 @@
         },
         {
           "name": "xDist",
-          "ioValue": 2
+          "ioValue": 1.5,
+          "currentEquation": "1.5"
         },
         {
           "name": "yDist",
