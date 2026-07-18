@@ -160,11 +160,11 @@
       "uniqueID": "id-68800",
       "ioValues": [
         {
-          "name": "Shape 3",
+          "name": "Shape 4",
           "ioValue": null
         },
         {
-          "name": "Shape 4",
+          "name": "Shape 5",
           "ioValue": null
         }
       ]
@@ -190,14 +190,14 @@
         },
         {
           "name": "Part Name",
-          "ioValue": "VeneerFixturePart1v3",
-          "currentEquation": "VeneerFixturePart1v3"
+          "ioValue": "VeneerFixturePart1v4",
+          "currentEquation": "VeneerFixturePart1v4"
         }
       ],
       "type": "STL",
       "resolution": 96,
       "importIndex": 0,
-      "partName": "VeneerFixturePart1v3"
+      "partName": "VeneerFixturePart1v4"
     },
     {
       "atomType": "Molecule",
@@ -919,8 +919,8 @@
         },
         {
           "name": "zDist",
-          "ioValue": -0.5,
-          "currentEquation": "-0.5"
+          "ioValue": 1,
+          "currentEquation": "1"
         }
       ]
     },
@@ -969,14 +969,14 @@
       "ap2ID": "id-68599"
     },
     {
-      "ap2Name": "Shape 3",
-      "ap1ID": "id-68687",
-      "ap2ID": "id-68800"
-    },
-    {
       "ap2Name": "remove",
       "ap1ID": "id-68687",
       "ap2ID": "id-68954"
+    },
+    {
+      "ap2Name": "Shape 5",
+      "ap1ID": "id-68687",
+      "ap2ID": "id-68800"
     },
     {
       "ap2Name": "holediam",
