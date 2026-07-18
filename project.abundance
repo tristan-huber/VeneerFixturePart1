@@ -79,7 +79,8 @@
         },
         {
           "name": "y-axis degrees",
-          "ioValue": -40
+          "ioValue": 0,
+          "currentEquation": "0"
         },
         {
           "name": "z-axis degrees",
@@ -106,7 +107,8 @@
         },
         {
           "name": "xDist",
-          "ioValue": -7
+          "ioValue": -5,
+          "currentEquation": "-5"
         },
         {
           "name": "yDist",
@@ -114,23 +116,7 @@
         },
         {
           "name": "zDist",
-          "ioValue": 0
-        }
-      ]
-    },
-    {
-      "atomType": "Difference",
-      "x": 0.3951822916666667,
-      "y": 0.7771428571428571,
-      "uniqueID": "id-68785",
-      "ioValues": [
-        {
-          "name": "retain",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "remove",
-          "ioValue": "__GEOMETRY_INPUT__"
+          "ioValue": 5
         }
       ]
     },
@@ -146,8 +132,8 @@
         },
         {
           "name": "xDist",
-          "ioValue": 1.95,
-          "currentEquation": "1.95"
+          "ioValue": 2.5,
+          "currentEquation": "2.5"
         },
         {
           "name": "yDist",
@@ -155,7 +141,7 @@
         },
         {
           "name": "zDist",
-          "ioValue": 3
+          "ioValue": 0
         }
       ]
     },
@@ -174,11 +160,11 @@
       "uniqueID": "id-68800",
       "ioValues": [
         {
-          "name": "Shape 2",
+          "name": "Shape 3",
           "ioValue": null
         },
         {
-          "name": "Shape 3",
+          "name": "Shape 4",
           "ioValue": null
         }
       ]
@@ -285,7 +271,8 @@
             },
             {
               "name": "y-axis degrees",
-              "ioValue": -90
+              "ioValue": -50,
+              "currentEquation": "-50"
             },
             {
               "name": "z-axis degrees",
@@ -569,8 +556,8 @@
             },
             {
               "name": "zDist",
-              "ioValue": 1.6666666666666667,
-              "currentEquation": "height / 3"
+              "ioValue": 1,
+              "currentEquation": "height / 5"
             }
           ]
         },
@@ -952,6 +939,22 @@
           "ioValue": "__GEOMETRY_INPUT__"
         }
       ]
+    },
+    {
+      "atomType": "Difference",
+      "x": 0.380859375,
+      "y": 0.7,
+      "uniqueID": "id-68954",
+      "ioValues": [
+        {
+          "name": "retain",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "remove",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
     }
   ],
   "allConnectors": [
@@ -966,14 +969,14 @@
       "ap2ID": "id-68599"
     },
     {
-      "ap2Name": "remove",
-      "ap1ID": "id-68687",
-      "ap2ID": "id-68785"
-    },
-    {
       "ap2Name": "Shape 3",
       "ap1ID": "id-68687",
       "ap2ID": "id-68800"
+    },
+    {
+      "ap2Name": "remove",
+      "ap1ID": "id-68687",
+      "ap2ID": "id-68954"
     },
     {
       "ap2Name": "holediam",
@@ -983,15 +986,10 @@
     {
       "ap2Name": "retain",
       "ap1ID": "id-68779",
-      "ap2ID": "id-68785"
+      "ap2ID": "id-68954"
     },
     {
-      "ap2Name": "geometry",
-      "ap1ID": "id-68785",
-      "ap2ID": "id-68789"
-    },
-    {
-      "ap2Name": "Shape 2",
+      "ap2Name": "Shape 4",
       "ap1ID": "id-68789",
       "ap2ID": "id-68800"
     },
@@ -1034,6 +1032,11 @@
       "ap2Name": "geometry",
       "ap1ID": "id-68949",
       "ap2ID": "id-68806"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-68954",
+      "ap2ID": "id-68789"
     }
   ],
   "unitsKey": "MM",
