@@ -7,12 +7,13 @@
   "ioValues": [
     {
       "name": "VeneerThickness",
-      "ioValue": 0.6
+      "ioValue": 0.7,
+      "currentEquation": "0.7"
     },
     {
       "name": "ArcDiamMM",
-      "ioValue": 367.5,
-      "currentEquation": "15 * 24.5"
+      "ioValue": 612.5,
+      "currentEquation": "25 * 24.5"
     },
     {
       "name": "BrassDiam",
@@ -35,15 +36,15 @@
     },
     {
       "atomType": "Input",
-      "x": 0.025384615384615384,
-      "y": 0.15384615384615385,
+      "x": 0.0231,
+      "y": 0.14,
       "uniqueID": "id-68435",
       "name": "VeneerThickness"
     },
     {
       "atomType": "Input",
-      "x": 0.025384615384615384,
-      "y": 0.24615384615384617,
+      "x": 0.0231,
+      "y": 0.22400000000000003,
       "uniqueID": "id-68438",
       "name": "ArcDiamMM"
     },
@@ -79,8 +80,7 @@
         },
         {
           "name": "y-axis degrees",
-          "ioValue": 0,
-          "currentEquation": "0"
+          "ioValue": 0
         },
         {
           "name": "z-axis degrees",
@@ -90,8 +90,8 @@
     },
     {
       "atomType": "Input",
-      "x": 0.025384615384615384,
-      "y": 0.3384615384615385,
+      "x": 0.0231,
+      "y": 0.5514285714285714,
       "uniqueID": "id-68693",
       "name": "BrassDiam"
     },
@@ -107,8 +107,7 @@
         },
         {
           "name": "xDist",
-          "ioValue": -5,
-          "currentEquation": "-5"
+          "ioValue": -5
         },
         {
           "name": "yDist",
@@ -132,8 +131,7 @@
         },
         {
           "name": "xDist",
-          "ioValue": 2.5,
-          "currentEquation": "2.5"
+          "ioValue": 2.5
         },
         {
           "name": "yDist",
@@ -190,14 +188,102 @@
         },
         {
           "name": "Part Name",
-          "ioValue": "VeneerFixturePart1v4",
-          "currentEquation": "VeneerFixturePart1v4"
+          "ioValue": "VeneerFixturePart1v5",
+          "currentEquation": "VeneerFixturePart1v5"
         }
       ],
       "type": "STL",
       "resolution": 96,
       "importIndex": 0,
-      "partName": "VeneerFixturePart1v4"
+      "partName": "VeneerFixturePart1v5"
+    },
+    {
+      "atomType": "Rectangle",
+      "x": 0.4700520833333333,
+      "y": 0.3,
+      "uniqueID": "id-68935",
+      "ioValues": [
+        {
+          "name": "x length",
+          "ioValue": 100
+        },
+        {
+          "name": "y length",
+          "ioValue": 100
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.5,
+      "y": 0.5,
+      "uniqueID": "id-68939",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": -10
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.5748697916666666,
+      "y": 0.5485714285714286,
+      "uniqueID": "id-68943",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": 0
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 1
+        }
+      ]
+    },
+    {
+      "atomType": "Difference",
+      "x": 0.7180989583333334,
+      "y": 0.48571428571428577,
+      "uniqueID": "id-68949",
+      "ioValues": [
+        {
+          "name": "retain",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "remove",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Difference",
+      "x": 0.380859375,
+      "y": 0.7,
+      "uniqueID": "id-68954",
+      "ioValues": [
+        {
+          "name": "retain",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "remove",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
     },
     {
       "atomType": "Molecule",
@@ -208,8 +294,7 @@
       "ioValues": [
         {
           "name": "holediam",
-          "ioValue": 3.7,
-          "currentEquation": "3.5"
+          "ioValue": 3.7
         }
       ],
       "topLevel": false,
@@ -250,7 +335,7 @@
             },
             {
               "name": "height",
-              "ioValue": 183.75,
+              "ioValue": 306.25,
               "currentEquation": "ArcDiamMM / 2"
             }
           ]
@@ -271,8 +356,8 @@
             },
             {
               "name": "y-axis degrees",
-              "ioValue": -50,
-              "currentEquation": "-50"
+              "ioValue": -70,
+              "currentEquation": "-70"
             },
             {
               "name": "z-axis degrees",
@@ -363,8 +448,8 @@
         },
         {
           "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.15384615384615385,
+          "x": 0.0231,
+          "y": 0.14,
           "uniqueID": "id-68776",
           "name": "holediam"
         }
@@ -427,11 +512,11 @@
       "ioValues": [
         {
           "name": "bigdiam",
-          "ioValue": 367.5
+          "ioValue": 612.5
         },
         {
           "name": "groovesize",
-          "ioValue": 0.6
+          "ioValue": 0.7
         }
       ],
       "topLevel": false,
@@ -456,7 +541,7 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 367.5,
+              "ioValue": 612.5,
               "currentEquation": "ArcDiamMM"
             }
           ]
@@ -470,11 +555,11 @@
           "ioValues": [
             {
               "name": "x",
-              "ioValue": 367.5
+              "ioValue": 612.5
             },
             {
               "name": "y",
-              "ioValue": 0.6
+              "ioValue": 0.7
             }
           ],
           "currentEquation": "x - (2* y)"
@@ -487,7 +572,7 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 366.3
+              "ioValue": 611.1
             }
           ]
         },
@@ -589,7 +674,7 @@
             },
             {
               "name": "xDist",
-              "ioValue": -183.75,
+              "ioValue": -306.25,
               "currentEquation": "-ArcDiamMM / 2"
             },
             {
@@ -653,15 +738,15 @@
         },
         {
           "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.15384615384615385,
+          "x": 0.0231,
+          "y": 0.14,
           "uniqueID": "id-68681",
           "name": "bigdiam"
         },
         {
           "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.24615384615384617,
+          "x": 0.0231,
+          "y": 0.22400000000000003,
           "uniqueID": "id-68684",
           "name": "groovesize"
         },
@@ -716,16 +801,16 @@
             },
             {
               "atomType": "Input",
-              "x": 0.025384615384615384,
-              "y": 0.15384615384615385,
+              "x": 0.0231,
+              "y": 0.14,
               "uniqueID": "id-68618",
               "name": "Shape",
               "type": "geometry"
             },
             {
               "atomType": "Input",
-              "x": 0.025384615384615384,
-              "y": 0.24615384615384617,
+              "x": 0.0231,
+              "y": 0.22400000000000003,
               "uniqueID": "id-68619",
               "name": "Offset"
             }
@@ -863,98 +948,6 @@
         }
       ],
       "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Rectangle",
-      "x": 0.4700520833333333,
-      "y": 0.3,
-      "uniqueID": "id-68935",
-      "ioValues": [
-        {
-          "name": "x length",
-          "ioValue": 100,
-          "currentEquation": "100"
-        },
-        {
-          "name": "y length",
-          "ioValue": 100,
-          "currentEquation": "100"
-        }
-      ]
-    },
-    {
-      "atomType": "Extrude",
-      "x": 0.5,
-      "y": 0.5,
-      "uniqueID": "id-68939",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "height",
-          "ioValue": -10,
-          "currentEquation": "-10"
-        }
-      ]
-    },
-    {
-      "atomType": "Move",
-      "x": 0.5748697916666666,
-      "y": 0.5485714285714286,
-      "uniqueID": "id-68943",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "xDist",
-          "ioValue": 0
-        },
-        {
-          "name": "yDist",
-          "ioValue": 0
-        },
-        {
-          "name": "zDist",
-          "ioValue": 1,
-          "currentEquation": "1"
-        }
-      ]
-    },
-    {
-      "atomType": "Difference",
-      "x": 0.7180989583333334,
-      "y": 0.48571428571428577,
-      "uniqueID": "id-68949",
-      "ioValues": [
-        {
-          "name": "retain",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "remove",
-          "ioValue": "__GEOMETRY_INPUT__"
-        }
-      ]
-    },
-    {
-      "atomType": "Difference",
-      "x": 0.380859375,
-      "y": 0.7,
-      "uniqueID": "id-68954",
-      "ioValues": [
-        {
-          "name": "retain",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "remove",
-          "ioValue": "__GEOMETRY_INPUT__"
-        }
-      ]
     }
   ],
   "allConnectors": [
@@ -1005,16 +998,6 @@
     },
     {
       "ap2Name": "geometry",
-      "ap1ID": "id-68730",
-      "ap2ID": "id-68779"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-68599",
-      "ap2ID": "id-68687"
-    },
-    {
-      "ap2Name": "geometry",
       "ap1ID": "id-68935",
       "ap2ID": "id-68939"
     },
@@ -1037,6 +1020,16 @@
       "ap2Name": "geometry",
       "ap1ID": "id-68954",
       "ap2ID": "id-68789"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-68730",
+      "ap2ID": "id-68779"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-68599",
+      "ap2ID": "id-68687"
     }
   ],
   "unitsKey": "MM",
