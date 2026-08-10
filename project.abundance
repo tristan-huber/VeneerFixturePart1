@@ -17,6 +17,11 @@
     {
       "name": "BrassDiam",
       "ioValue": 3.7
+    },
+    {
+      "name": "angle",
+      "ioValue": -70,
+      "currentEquation": "-70"
     }
   ],
   "topLevel": true,
@@ -294,6 +299,11 @@
         {
           "name": "holediam",
           "ioValue": 3.7
+        },
+        {
+          "name": "angle",
+          "ioValue": -70,
+          "currentEquation": "-70"
         }
       ],
       "topLevel": false,
@@ -450,6 +460,13 @@
           "y": 0.14,
           "uniqueID": "id-68776",
           "name": "holediam"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.0231,
+          "y": 0.4226190476190476,
+          "uniqueID": "id-69097",
+          "name": "angle"
         }
       ],
       "allConnectors": [
@@ -497,6 +514,11 @@
           "ap2Name": "diameter",
           "ap1ID": "id-68776",
           "ap2ID": "id-68734"
+        },
+        {
+          "ap2Name": "y-axis degrees",
+          "ap1ID": "id-69097",
+          "ap2ID": "id-68736"
         }
       ],
       "fileTypeVersion": 1
@@ -946,6 +968,13 @@
         }
       ],
       "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Input",
+      "x": 0.0231,
+      "y": 0.5416666666666666,
+      "uniqueID": "id-69100",
+      "name": "angle"
     }
   ],
   "allConnectors": [
@@ -1028,6 +1057,11 @@
       "ap2Name": "geometry",
       "ap1ID": "id-68599",
       "ap2ID": "id-68687"
+    },
+    {
+      "ap2Name": "angle",
+      "ap1ID": "id-69100",
+      "ap2ID": "id-68730"
     }
   ],
   "unitsKey": "MM",
