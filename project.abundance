@@ -7,8 +7,7 @@
   "ioValues": [
     {
       "name": "VeneerThickness",
-      "ioValue": 0.7,
-      "currentEquation": "0.7"
+      "ioValue": 0.7
     },
     {
       "name": "ArcDiamMM",
@@ -91,7 +90,7 @@
     {
       "atomType": "Input",
       "x": 0.0231,
-      "y": 0.5514285714285714,
+      "y": 0.30800000000000005,
       "uniqueID": "id-68693",
       "name": "BrassDiam"
     },
@@ -356,8 +355,7 @@
             },
             {
               "name": "y-axis degrees",
-              "ioValue": -70,
-              "currentEquation": "-70"
+              "ioValue": -70
             },
             {
               "name": "z-axis degrees",
@@ -987,11 +985,6 @@
       "ap2ID": "id-68800"
     },
     {
-      "ap2Name": "number or geometry",
-      "ap1ID": "id-68800",
-      "ap2ID": "id-68430"
-    },
-    {
       "ap2Name": "retain",
       "ap1ID": "id-68800",
       "ap2ID": "id-68949"
@@ -1015,6 +1008,11 @@
       "ap2Name": "geometry",
       "ap1ID": "id-68949",
       "ap2ID": "id-68806"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-68949",
+      "ap2ID": "id-68430"
     },
     {
       "ap2Name": "geometry",
