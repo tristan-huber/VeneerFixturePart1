@@ -9,6 +9,7 @@
 - **VeneerThickness** (number)
 - **ArcDiamMM** (number)
 - **BrassDiam** (number)
+- **angle** (number)
 
 
 
