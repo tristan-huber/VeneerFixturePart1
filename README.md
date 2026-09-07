@@ -2,7 +2,7 @@
 
 # VeneerFixturePart1
 
-![](/project.svg)
+![](/project.png)
 
 ## Inputs
 
