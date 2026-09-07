@@ -12,7 +12,7 @@
     },
     {
       "name": "ArcDiamMM",
-      "ioValue": 294
+      "ioValue": 441
     },
     {
       "name": "BrassDiam",
@@ -21,8 +21,8 @@
     },
     {
       "name": "angle",
-      "ioValue": -45,
-      "currentEquation": "-45"
+      "ioValue": -41,
+      "currentEquation": "-41"
     }
   ],
   "topLevel": true,
@@ -78,7 +78,7 @@
       "ioValues": [
         {
           "name": "bigdiam",
-          "ioValue": 294
+          "ioValue": 441
         },
         {
           "name": "groovesize",
@@ -107,7 +107,7 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 294,
+              "ioValue": 441,
               "currentEquation": "ArcDiamMM"
             }
           ]
@@ -121,7 +121,7 @@
           "ioValues": [
             {
               "name": "x",
-              "ioValue": 294
+              "ioValue": 441
             },
             {
               "name": "y",
@@ -138,7 +138,7 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 292.6
+              "ioValue": 439.6
             }
           ]
         },
@@ -240,7 +240,7 @@
             },
             {
               "name": "xDist",
-              "ioValue": -147,
+              "ioValue": -220.5,
               "currentEquation": "-ArcDiamMM / 2"
             },
             {
@@ -559,7 +559,7 @@
         },
         {
           "name": "angle",
-          "ioValue": -45
+          "ioValue": -41
         }
       ],
       "topLevel": false,
@@ -600,7 +600,7 @@
             },
             {
               "name": "height",
-              "ioValue": 147,
+              "ioValue": 220.5,
               "currentEquation": "ArcDiamMM / 2"
             }
           ]
@@ -621,7 +621,7 @@
             },
             {
               "name": "y-axis degrees",
-              "ioValue": -45
+              "ioValue": -41
             },
             {
               "name": "z-axis degrees",
@@ -872,14 +872,14 @@
         },
         {
           "name": "Part Name",
-          "ioValue": "VeneerFixturePart1v6",
-          "currentEquation": "VeneerFixturePart1v6"
+          "ioValue": "VeneerFixturePart1v8",
+          "currentEquation": "VeneerFixturePart1v8"
         }
       ],
       "type": "STL",
       "resolution": 96,
       "importIndex": 0,
-      "partName": "VeneerFixturePart1v6"
+      "partName": "VeneerFixturePart1v8"
     },
     {
       "atomType": "Rectangle",
